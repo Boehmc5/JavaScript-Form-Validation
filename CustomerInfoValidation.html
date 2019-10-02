@@ -1,0 +1,43 @@
+<!Christopher Boehm>
+<!10/1/2019>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Style.css">
+
+<title>Customer Information Page</title>
+</head> 
+<body>
+
+<h1>Customer Information</h1>
+
+<p>Please enter your information:</p>
+
+<form id="info" action="/action_page.php" onsubmit="return myFunction()" method="post">
+	<strong>Enter your first name:</strong>
+	<input name="Firstname" type="text" required>
+	<br></br>
+	<strong>Enter your last name:</strong>
+	<input name="Lasttname" type="text" required>
+	<br></br>
+	<strong>Enter your email:<strong>
+	<input name="email" type="text" required>
+	<br></br>
+	<button type = "button" onclick="myFunction()">Submit</button>
+	<br></br>
+</form>
+
+<script>
+function myFunction() {
+  var a = document.forms["info"]["Firstname"].value;
+  var b = document.forms["info"]["Lasttname"].value;
+  var c = document.forms["info"]["email"].value;
+  if (a == "" || b ==""|| c== "") {
+    alert("Missing values must be filled out");
+    return false;
+  }
+}
+
+</body>
+</html>
